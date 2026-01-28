@@ -4,14 +4,12 @@ import time, os
 
 from .. import bot as Drone
 from .. import userbot, Bot
-from .. import FORCESUB as fs
 from main.plugins.pyroplug import get_msg
 from main.plugins.helpers import get_link, join
 
 from telethon import events
 from pyrogram.errors import FloodWait
 
-from ethon.telefunc import force_sub
 
 ft = f"To use this bot you've to join @{fs}."
 
@@ -28,10 +26,6 @@ async def clone(event):
         if not link:
             return
     except TypeError:
-        return
-    s, r = await force_sub(event.client, fs, event.sender_id, ft)
-    if s == True:
-        await event.reply(r)
         return
     edit = await event.reply("Processing!")
     try:

@@ -10,9 +10,6 @@ from main.plugins.helpers import get_link, join
 from telethon import events
 from pyrogram.errors import FloodWait
 
-
-ft = f"To use this bot you've to join @{fs}."
-
 message = "Send me the message link you want to start saving from, as a reply to this message."
 
 @Drone.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))

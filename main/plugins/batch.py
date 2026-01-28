@@ -19,7 +19,6 @@ from pyrogram import Client
 from pyrogram.errors import FloodWait
 from ethon.pyfunc import video_metadata
 
-ft = f"To use this bot you've to join @{fs}."
 
 batch = []
 
